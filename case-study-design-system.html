@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case study: How I built a comprehensive design system unifying five Viveka Health products with accessibility baked into every component.">
+    <title>Viveka Design System - Nabin Ghimire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <script src="js/main.js"></script>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="nav" aria-label="Primary navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Nabin Ghimire - Home">Nabin Ghimire</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Case Study Hero -->
+        <section class="case-study-hero">
+            <div class="container-narrow">
+                <h1>Viveka Design System</h1>
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Company</span>
+                        <span class="meta-value">Viveka Health</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Lead Designer & System Architect</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Type</span>
+                        <span class="meta-value">Design System / Enterprise Healthcare</span>
+                    </div>
+                </div>
+                <p style="font-size: 1.25rem; line-height: 1.6; color: var(--color-secondary); margin-top: var(--space-4);">
+                    Transforming five disconnected products into a cohesive healthcare platform where members, employers, and providers experience the same level of polish and accessibility across every interaction.
+                </p>
+            </div>
+        </section>
+
+        <!-- Hero Image -->
+        <section class="section">
+            <div class="container">
+                <div class="case-study-image" style="height: 500px;">
+                    <img src="images/design-system-hero.jpg" alt="Design System Component Library Overview" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Content -->
+        <article class="case-study-content">
+            <div class="container-narrow">
+                <!-- The Challenge -->
+                <section class="case-study-section">
+                    <h2>The Challenge</h2>
+                    <p>
+                        A member searching for a doctor shouldn't feel like they've entered a different company's website when they switch to checking their eligibility. Yet that's exactly what was happening—our five products felt disconnected because they were designed and built in isolation.
+                    </p>
+                    <p>
+                        The cost was real: HR administrators reported confusion moving between tools. Members struggled to complete tasks that spanned multiple products. Our design team duplicated effort across projects. Engineers built custom components for identical interactions. And most concerning, we were excluding users with disabilities by patching in accessibility after the fact.
+                    </p>
+                    <p>
+                        The numbers told the story: 12 different button styles, 4 validation approaches, inconsistent color usage, and zero components that met WCAG standards out of the box.
+                    </p>
+                </section>
+
+                <!-- My Role -->
+                <section class="case-study-section">
+                    <h2>My Role</h2>
+                    <p>
+                        I led the design system initiative end-to-end: auditing existing patterns, defining the component architecture, establishing accessibility standards, creating comprehensive documentation, and building governance processes. I collaborated closely with 3 product designers and the engineering team to ensure adoption.
+                    </p>
+                    <p>
+                        This was a strategic initiative that required balancing immediate product needs with long-term scalability—making decisions that would impact every designer and engineer at Viveka.
+                    </p>
+                </section>
+
+                <!-- The Approach -->
+                <section class="case-study-section">
+                    <h2>The Approach</h2>
+
+                    <h3>Discovery & Audit</h3>
+                    <p>
+                        I mapped every button, form field, modal, and navigation pattern across all five products. The audit surfaced where users were getting confused—like seeing three different "submit" button styles in one workflow—and where engineers were rebuilding the same components with slight variations.
+                    </p>
+                    <p>
+                        Interviews revealed the human cost: designers frustrated by inconsistency, engineers drowning in one-off requests, and product teams unable to ship features quickly because basic components didn't exist.
+                    </p>
+
+                    <div class="case-study-image">
+                        <img src="images/design-system-audit.jpg" alt="Component Audit Spreadsheet" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <h3>Architecture & Foundation</h3>
+                    <p>
+                        Instead of starting with buttons and forms, I began where it matters most: the semantic foundation that ensures accessibility by default. Every color pairing was tested for WCAG 2.1 AA contrast. The spacing scale (8px grid) creates visual rhythm users can feel even if they can't articulate it. Typography was sized for readability at every viewport, with line heights optimized for healthcare content—often dense with medical terms.
+                    </p>
+                    <p>
+                        The color system became a communication tool: blue signals "take action," green confirms "success," red demands "attention." When an HR admin sees green, they instantly know the enrollment went through. When a member sees red text, they know exactly where to fix an error—no hunting required.
+                    </p>
+
+                    <div class="case-study-image">
+                        <img src="images/design-system-colors.jpg" alt="Color System with Accessibility Annotations" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <h3>Component Library</h3>
+                    <p>
+                        Each component solves a real problem users face. The multi-step form component guides HR admins through complex enrollments without overwhelming them. The data table handles thousands of provider records while remaining keyboard-navigable for power users. The notification system ensures critical health information never goes unnoticed, with persistent alerts for time-sensitive actions.
+                    </p>
+                    <p>
+                        Every component ships with all states designed—including the ones teams often forget: What happens when the button is disabled? How does the form look when there's an error? What do loading states communicate to anxious users waiting for their eligibility to confirm?
+                    </p>
+                    <p>
+                        More importantly, each component includes the "why": when to use a modal versus a drawer, why this validation pattern prevents errors better than that one, how this color choice helps users with color blindness.
+                    </p>
+
+                    <div class="case-study-image">
+                        <img src="images/design-system-buttons.jpg" alt="Button Component with All States" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <div class="case-study-image">
+                        <img src="images/design-system-forms.jpg" alt="Form Components and Validation Patterns" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <h3>Documentation & Governance</h3>
+                    <p>
+                        A design system lives or dies by its documentation. I built ours to teach, not just catalog. When a designer needs a date picker, they don't just see the component—they learn why we chose this pattern over alternatives, which user research informed the design, and what accessibility tradeoffs we considered.
+                    </p>
+                    <p>
+                        The contribution process balances speed with consistency: teams can request new components, but each request includes "have you tried combining existing components?" Because sometimes the right answer is "use what we have"—the best code is code you don't write.
+                    </p>
+                    <p>
+                        Monthly syncs keep the system evolving with user needs while preventing fragmentation. When one team solves a problem well, everyone benefits.
+                    </p>
+
+                    <div class="case-study-image">
+                        <img src="images/design-system-documentation.jpg" alt="Documentation Site Interface" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </section>
+
+                <!-- The Outcome -->
+                <section class="case-study-section">
+                    <h2>The Outcome</h2>
+                    <p>
+                        The member who switches from finding a doctor to checking their eligibility now experiences one Viveka, not five disconnected tools. The interaction patterns they learned in one product transfer seamlessly to the next. No relearning required.
+                    </p>
+                    <p>
+                        For our team, the impact is measurable: designers prototype new features in hours instead of days because components already exist. Engineers ship features faster using battle-tested, accessible components. Product teams focus on solving user problems instead of debating button styles.
+                    </p>
+                    <p>
+                        The accessibility-first approach transformed compliance from a checklist item to a default state. Screen reader users navigate our products confidently. Keyboard-only users complete tasks without touching a mouse. Users with color blindness aren't excluded by poor contrast. We're not retrofitting accessibility—we're building it in.
+                    </p>
+                    <p>
+                        Most powerfully, the system created a shared vocabulary. When design says "multi-step form" and engineering says "multi-step form," we're talking about the same component, with the same behavior, meeting the same accessibility standards. This shared understanding eliminates entire categories of bugs before they happen.
+                    </p>
+
+                    <div class="case-study-image">
+                        <img src="images/design-system-before-after.jpg" alt="Before/After Product Consistency Comparison" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <h3 style="margin-top: var(--space-6);">What I'd Do Differently</h3>
+                    <p>
+                        I'd start the documentation site earlier—even before finishing the first components. Teams asking "where do I find this?" before components are ready signals demand. Early documentation would have accelerated adoption.
+                    </p>
+                    <p>
+                        I'd involve front-end engineers from day one, not week three. Their technical constraints shaped better solutions than I could have designed in isolation. The best design systems emerge from designer-developer collaboration, not designer handoff.
+                    </p>
+                    <p>
+                        I'd track adoption metrics from launch: which components get used, which get ignored, where teams build custom solutions instead of using the system. Those signals reveal where the system succeeds and where it fails to meet real needs.
+                    </p>
+                </section>
+            </div>
+        </article>
+
+        <!-- Case Navigation -->
+        <nav class="case-nav">
+            <div class="container-narrow">
+                <div style="display: flex; justify-content: space-between; width: 100%;">
+                    <a href="case-study-docsink.html" class="case-nav-link">
+                        <span class="case-nav-label">← Previous Project</span>
+                        <span class="case-nav-title">DOCS.ink Digital Waiver Platform</span>
+                    </a>
+                    <a href="case-study-eligibility.html" class="case-nav-link next">
+                        <span class="case-nav-label">Next Project →</span>
+                        <span class="case-nav-title">Employer Eligibility Platform</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="mailto:ghinabin@gmail.com">Email</a></li>
+                <li><a href="https://linkedin.com/in/nabin-ghimire" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <p class="footer-content">&copy; 2025 Nabin Ghimire. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

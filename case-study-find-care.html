@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case study: Redesigning provider search and discovery to help healthcare members find the right care faster with confidence.">
+    <title>Find Care Provider Search - Nabin Ghimire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <script src="js/main.js"></script>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="nav" aria-label="Primary navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Nabin Ghimire - Home">Nabin Ghimire</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Case Study Hero -->
+        <section class="case-study-hero">
+            <div class="container-narrow">
+                <h1>Find Care Provider Search</h1>
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Company</span>
+                        <span class="meta-value">Viveka Health</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Product Designer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Type</span>
+                        <span class="meta-value">Multi-Platform Application / Consumer Healthcare</span>
+                    </div>
+                </div>
+                <p style="font-size: 1.25rem; line-height: 1.6; color: var(--color-secondary); margin-top: var(--space-4);">
+                    Redesigning how healthcare members discover and book appointments with providers—making a stressful process intuitive and transparent.
+                </p>
+            </div>
+        </section>
+
+        <!-- Hero Image -->
+        <section class="section">
+            <div class="container">
+                <div class="case-study-image" style="height: 500px;">
+                    <img src="images/find-care-hero.jpg" alt="Provider Search Interface" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Content -->
+        <article class="case-study-content">
+            <div class="container-narrow">
+                <!-- The Challenge -->
+                <section class="case-study-section">
+                    <h2>The Challenge</h2>
+                    <p>
+                        Finding the right healthcare provider is stressful. Users needed to search across thousands of providers, filter by complex criteria (specialty, location, insurance, languages spoken, ratings), understand costs, and book appointments—often while dealing with health concerns. The existing search experience was overwhelming: too many filters presented at once, confusing results, and no clear path from discovery to booking.
+                    </p>
+                    <p>
+                        Users would abandon searches out of frustration or book appointments with providers who weren't the right fit. The lack of cost transparency meant unexpected bills after care. The experience needed to reduce anxiety, not add to it.
+                    </p>
+                </section>
+
+                <!-- My Role -->
+                <section class="case-study-section">
+                    <h2>My Role</h2>
+                    <p>
+                        I designed the complete provider search and discovery experience across web and mobile platforms, focusing on reducing cognitive load while maintaining powerful search capabilities. I worked with the product manager on prioritization and with engineering on search performance optimization.
+                    </p>
+                    <p>
+                        This required balancing simplicity with flexibility—making common tasks effortless while supporting complex search scenarios for users with specific needs.
+                    </p>
+                </section>
+
+                <!-- The Approach -->
+                <section class="case-study-section">
+                    <h2>The Approach</h2>
+
+                    <h3>Understanding User Needs</h3>
+                    <p>
+                        I analyzed search patterns and conducted user interviews to understand how people actually find providers. Key insight: most users have a specific need (e.g., "dermatologist near me who takes my insurance") rather than browsing. But they also want reassurance that they're making a good choice—hence the need for ratings, photos, and detailed profiles.
+                    </p>
+                    <p>
+                        Users described the current experience as "paralyzing." Too many choices without enough information to make a confident decision. My goal was to guide users to good matches quickly while providing the depth they needed to feel certain.
+                    </p>
+
+                    <div class="case-study-image">
+                        <img src="images/find-care-journey.jpg" alt="User Journey Map" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <h3>Search Experience</h3>
+                    <p>
+                        I designed a search-first interface that understands natural queries. Users can type "dermatologist downtown accepting new patients" and get relevant results. The system interprets intent and applies appropriate filters automatically, while making it easy to refine results manually.
+                    </p>
+                    <p>
+                        The search bar is prominent and always accessible—users shouldn't have to hunt for how to search. Autocomplete suggests specialties, conditions, and provider names as users type, reducing errors and teaching users what's searchable.
+                    </p>
+
+                    <div class="case-study-image">
+                        <img src="images/find-care-search.jpg" alt="Search Interface with Smart Query Handling" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <h4>Filter Design</h4>
+                    <p>
+                        Instead of overwhelming users with every possible filter upfront, I designed progressive filtering. The most common filters (location, specialty, insurance) are immediately visible. Advanced filters (languages, gender preference, hospital affiliations) are accessible but not in the way.
+                    </p>
+                    <p>
+                        Applied filters are clearly visible with easy removal. Users can see at a glance what criteria are narrowing their results and adjust accordingly.
+                    </p>
+
+                    <div class="case-study-image">
+                        <img src="images/find-care-filters.jpg" alt="Results Page with Filter Panel" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <h4>Results & Profiles</h4>
+                    <p>
+                        Search results show the essential information at a glance: name, specialty, distance, ratings, and next available appointment. Users can quickly scan results to identify promising matches.
+                    </p>
+                    <p>
+                        Detailed profiles provide comprehensive information organized into scannable sections: about, education, accepted insurance, office locations, and patient reviews. Cost estimation tools help users understand potential out-of-pocket expenses before booking.
+                    </p>
+                    <p>
+                        I designed profiles to build trust and transparency. Photos humanize providers. Detailed credentials build confidence. Clear insurance information prevents surprise bills.
+                    </p>
+
+                    <div class="case-study-image">
+                        <img src="images/find-care-profile.jpg" alt="Provider Profile with All Sections" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <div class="case-study-image">
+                        <img src="images/find-care-cost.jpg" alt="Cost Estimation Component" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <h4>Booking Flow</h4>
+                    <p>
+                        I designed a streamlined booking flow that remembers user information, suggests available times based on stated preferences, and provides clear confirmation. Users can book for themselves or family members covered under their plan.
+                    </p>
+                    <p>
+                        The booking process removes friction—users shouldn't have to re-enter insurance information they've already provided. Appointment confirmation includes everything they need: provider details, location, date/time, and pre-visit instructions.
+                    </p>
+
+                    <div class="case-study-image">
+                        <img src="images/find-care-booking.jpg" alt="Booking Flow Screens" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+
+                    <h3>Mobile Experience</h3>
+                    <p>
+                        Many users search for providers on mobile, often while on the go or in stressful situations. I designed the mobile experience to be just as capable as desktop but optimized for touch and smaller screens. Filters collapse intelligently, profiles remain scannable, and booking works seamlessly.
+                    </p>
+
+                    <div class="case-study-image">
+                        <img src="images/find-care-mobile.jpg" alt="Mobile App Experience" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </section>
+
+                <!-- The Outcome -->
+                <section class="case-study-section">
+                    <h2>The Outcome</h2>
+                    <p>
+                        The new search experience has transformed how users find care. Search now feels intuitive rather than overwhelming. Users find relevant providers faster and with more confidence. The streamlined booking flow has improved conversion from search to scheduled appointment.
+                    </p>
+                    <p>
+                        Drop-off rates during the search process have decreased significantly. Users particularly appreciate the cost transparency and the ability to filter by practical criteria like "accepting new patients." One user told us: "I used to call around to different offices. Now I can find someone, see costs, and book—all in one place."
+                    </p>
+                    <p>
+                        The mobile experience has been especially successful. Users frequently search for providers while commuting or during breaks, and the mobile-optimized interface supports those on-the-go scenarios.
+                    </p>
+
+                    <h3 style="margin-top: var(--space-6);">Key Learnings</h3>
+                    <p>
+                        Smart defaults dramatically improve the experience. Pre-filling location based on user preferences, defaulting to "in-network" providers, and showing "accepting new patients" first reduces the cognitive load of search.
+                    </p>
+                    <p>
+                        Cost transparency is critical in healthcare. Users shouldn't have to wonder what something will cost. Showing estimated costs upfront builds trust and prevents bill shock.
+                    </p>
+                    <p>
+                        Progressive disclosure works better than showing everything at once. Start simple, make it easy to go deeper. Most users don't need advanced filters, but those who do should be able to find them easily.
+                    </p>
+                </section>
+            </div>
+        </article>
+
+        <!-- Case Navigation -->
+        <nav class="case-nav">
+            <div class="container-narrow">
+                <div style="display: flex; justify-content: space-between; width: 100%;">
+                    <a href="case-study-eligibility.html" class="case-nav-link">
+                        <span class="case-nav-label">← Previous Project</span>
+                        <span class="case-nav-title">Employer Eligibility Platform</span>
+                    </a>
+                    <a href="case-study-docsink.html" class="case-nav-link next">
+                        <span class="case-nav-label">Next Project →</span>
+                        <span class="case-nav-title">DOCS.ink Digital Waiver Platform</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="mailto:ghinabin@gmail.com">Email</a></li>
+                <li><a href="https://linkedin.com/in/nabin-ghimire" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <p class="footer-content">&copy; 2025 Nabin Ghimire. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
