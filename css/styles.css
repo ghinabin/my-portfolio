@@ -70,7 +70,10 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--color-secondary);
-  background-color: var(--color-background);
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(224, 242, 254, 0.3) 0%, transparent 100%),
+    var(--color-background);
+  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -146,6 +149,12 @@ a:focus-visible {
 
 .section {
   padding: var(--space-8) 0;
+}
+
+/* First section on a page - accounts for transparent navbar */
+main > .section:first-child,
+main > .section-compact:first-child {
+  padding-top: calc(var(--space-8) + 80px);
 }
 
 .section-large {
@@ -339,13 +348,10 @@ main > .section:nth-child(odd) {
 
 /* HERO SECTION */
 .hero {
-  padding: clamp(5rem, 10vw, 8rem) 0 var(--space-10);
+  padding: clamp(7rem, 12vw, 10rem) 0 var(--space-10);
+  padding-top: calc(clamp(5rem, 10vw, 8rem) + 80px);
   text-align: center;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(224, 242, 254, 0.4) 0%, transparent 100%),
-    radial-gradient(circle at 100% 20%, rgba(224, 242, 254, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 0% 80%, rgba(224, 242, 254, 0.2) 0%, transparent 50%),
-    linear-gradient(180deg, #ffffff 0%, rgba(250, 250, 250, 0.5) 100%);
+  background: transparent;
   position: relative;
   overflow: hidden;
 }
@@ -700,8 +706,8 @@ main > .section:nth-child(odd) {
 
 /* CASE STUDY */
 .case-study-hero {
-  background: linear-gradient(180deg, var(--color-surface) 0%, rgba(250, 250, 250, 0.5) 100%);
-  padding: var(--space-12) 0;
+  background: transparent;
+  padding: calc(var(--space-12) + 80px) 0 var(--space-12);
   border-bottom: 1px solid var(--color-border);
   position: relative;
 }
@@ -1338,7 +1344,22 @@ main > .section:nth-child(odd) {
 
   /* Hero - Stack CTAs vertically */
   .hero {
-    padding: var(--space-8) 0 var(--space-6);
+    padding: calc(var(--space-8) + 60px) 0 var(--space-6);
+    padding-top: calc(var(--space-8) + 60px) !important;
+  }
+
+  /* First sections - reduce navbar offset on mobile */
+  main > .section:first-child,
+  main > .section-compact:first-child {
+    padding-top: calc(var(--space-6) + 60px);
+  }
+
+  .case-study-hero {
+    padding: calc(var(--space-10) + 60px) 0 var(--space-8);
+  }
+
+  .contact-hero {
+    padding-top: calc(var(--space-6) + 60px);
   }
 
   .hero-cta {
@@ -1419,9 +1440,9 @@ main > .section:nth-child(odd) {
 
 /* CONTACT PAGE */
 .contact-hero {
-  padding: clamp(3rem, 5vw, 4rem) 0 var(--space-5);
+  padding: calc(clamp(3rem, 5vw, 4rem) + 80px) 0 var(--space-5);
   text-align: center;
-  background: #fafafa;
+  background: transparent;
 }
 
 .contact-hero-content {
