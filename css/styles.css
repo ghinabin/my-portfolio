@@ -13,6 +13,7 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* DESIGN TOKENS */
@@ -80,6 +81,7 @@ body {
     #fafafa;
   background-attachment: fixed;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -141,35 +143,44 @@ a:focus-visible {
 }
 
 /* LAYOUT CONTAINERS */
+/* Container System */
 .container {
-  max-width: var(--max-width);
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--space-3);
+  padding: 0 24px;
 }
 
-.container-narrow {
-  max-width: var(--content-width);
+.container-narrow,
+.container--narrow {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 var(--space-3);
+  padding: 0 24px;
 }
 
+.container--wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section Spacing */
 .section {
-  padding: var(--space-10) 0;
+  padding: 80px 0;
 }
 
 /* First section on a page - accounts for transparent navbar */
 main > .section:first-child,
 main > .section-compact:first-child {
-  padding-top: calc(var(--space-10) + 80px);
+  padding-top: calc(80px + 80px);
 }
 
 .section-large {
-  padding: var(--space-15) 0;
+  padding: 120px 0;
 }
 
 /* Compact section - less vertical spacing */
 .section-compact {
-  padding: var(--space-6) 0;
+  padding: 48px 0;
 }
 
 /* Clean, balanced backgrounds */
@@ -397,11 +408,12 @@ main > .section-compact:first-child {
   box-shadow: 0 6px 20px rgba(0, 119, 182, 0.35);
 }
 
-/* STATS BAR */
-.stats {
+/* STATS GRID - 4 columns on desktop */
+.stats,
+.stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: var(--space-5);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
   padding: 0;
   background: transparent;
   margin-bottom: 0;
@@ -452,11 +464,11 @@ main > .section-compact:first-child {
   z-index: 1;
 }
 
-/* PROJECT GRID */
+/* PROJECT GRID - 2 columns on desktop */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-5);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
 }
 
 .project-card {
@@ -1096,13 +1108,39 @@ main > .section-compact:first-child {
 
 /* Large Tablet (1024px and below) */
 @media (max-width: 1024px) {
-  .container {
-    padding: 0 var(--space-4);
+  .container,
+  .container-narrow,
+  .container--narrow,
+  .container--wide {
+    padding: 0 24px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .section-large {
+    padding: 96px 0;
+  }
+
+  .section-compact {
+    padding: 40px 0;
+  }
+
+  main > .section:first-child,
+  main > .section-compact:first-child {
+    padding-top: calc(64px + 80px);
   }
 
   .work-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-5);
+    gap: 32px;
+  }
+
+  .stats,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   .competencies {
@@ -1113,6 +1151,30 @@ main > .section-compact:first-child {
 
 /* Tablet and Mobile (768px and below) */
 @media (max-width: 768px) {
+  .container,
+  .container-narrow,
+  .container--narrow,
+  .container--wide {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-large {
+    padding: 72px 0;
+  }
+
+  .section-compact {
+    padding: 32px 0;
+  }
+
+  main > .section:first-child,
+  main > .section-compact:first-child {
+    padding-top: calc(48px + 60px);
+  }
+
   /* Navigation - Thumb-friendly spacing and tap targets */
   .nav {
     padding: var(--space-2) 0;
@@ -1146,10 +1208,17 @@ main > .section-compact:first-child {
     line-height: 1.65;
   }
 
+  /* Work Grid - Single column on mobile */
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
   /* Stats - Two column layout on tablet */
-  .stats {
+  .stats,
+  .stats-grid {
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-3);
+    gap: 16px;
     padding: var(--space-5);
   }
 
@@ -1159,12 +1228,6 @@ main > .section-compact:first-child {
 
   .stat-value {
     font-size: 1.5rem;
-  }
-
-  /* Project Grid - Single column, optimized spacing */
-  .work-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
   }
 
   .project-image {
@@ -1294,15 +1357,6 @@ main > .section-compact:first-child {
     display: inline-flex;
     align-items: center;
   }
-
-  /* Section Spacing - Reduce on mobile */
-  .section {
-    padding: var(--space-10) 0;
-  }
-
-  .section-large {
-    padding: var(--space-12) 0;
-  }
 }
 
 /* Small Mobile (640px and below) */
@@ -1338,10 +1392,31 @@ main > .section-compact:first-child {
 
 /* Small Mobile (480px and below) */
 @media (max-width: 480px) {
-  /* Container - Add horizontal padding for breathing room */
-  .container {
-    padding-left: var(--space-3);
-    padding-right: var(--space-3);
+  /* Container - Mobile padding */
+  .container,
+  .container-narrow,
+  .container--narrow,
+  .container--wide {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .section-large {
+    padding: 56px 0;
+  }
+
+  .section-compact {
+    padding: 24px 0;
+  }
+
+  /* First sections - reduce navbar offset on mobile */
+  main > .section:first-child,
+  main > .section-compact:first-child {
+    padding-top: calc(40px + 60px);
   }
 
   /* Navigation - Compact on small screens */
@@ -1358,23 +1433,23 @@ main > .section-compact:first-child {
     padding: var(--space-2) 8px;
   }
 
+  /* Work Grid - Single column with reduced gap */
+  .work-grid {
+    gap: 16px;
+  }
+
   /* Stats - Single column stack */
-  .stats {
+  .stats,
+  .stats-grid {
     grid-template-columns: 1fr;
     padding: var(--space-4);
-    gap: var(--space-2);
+    gap: 16px;
   }
 
   /* Hero - Stack CTAs vertically */
   .hero {
     padding: calc(var(--space-8) + 60px) 0 var(--space-6);
     padding-top: calc(var(--space-8) + 60px) !important;
-  }
-
-  /* First sections - reduce navbar offset on mobile */
-  main > .section:first-child,
-  main > .section-compact:first-child {
-    padding-top: calc(var(--space-6) + 60px);
   }
 
   .case-study-hero {
@@ -1438,15 +1513,6 @@ main > .section-compact:first-child {
   /* Contact Info - Stack items */
   .contact-info {
     gap: var(--space-4);
-  }
-
-  /* Section Spacing - Further reduce on small phones */
-  .section {
-    padding: var(--space-8) 0;
-  }
-
-  .section-large {
-    padding: var(--space-10) 0;
   }
 
   /* Timeline - More compact */
