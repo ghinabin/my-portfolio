@@ -17,7 +17,13 @@
     <!-- Navigation -->
     <nav class="nav" aria-label="Primary navigation">
         <div class="container nav-container">
-            <a href="index.html" class="nav-logo" aria-label="Nabin Ghimire - Home">Nabin Ghimire</a>
+            <a href="index.html" class="nav-logo" aria-label="Nabin Ghimire - Home">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                    <rect width="40" height="40" rx="8" fill="#0891b2" opacity="0.1"/>
+                    <text x="20" y="28" font-family="DM Sans, sans-serif" font-size="18" font-weight="700" fill="#0891b2" text-anchor="middle">NG</text>
+                </svg>
+                <span class="logo-text">Nabin Ghimire</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="work.html">Work</a></li>
@@ -39,7 +45,7 @@
                     <h1>About Nabin</h1>
                 </div>
 
-                <div style="font-size: 1.125rem; line-height: 1.7;">
+                <div class="about-intro">
                     <p>
                         I'm a Senior Product Designer with 9+ years of experience crafting user-centered solutions for enterprise healthcare platforms.
                     </p>
@@ -57,7 +63,7 @@
         </section>
 
         <!-- Core Competencies -->
-        <section class="section" style="background: rgba(248, 250, 252, 0.4); padding: var(--space-10) 0;">
+        <section class="section section--light-bg">
             <div class="container-narrow">
                 <h2 class="text-center mb-large">What I Bring</h2>
                 <div class="competencies">
@@ -131,40 +137,37 @@
         </section>
 
         <!-- Education & Certifications -->
-        <section class="section" style="background: rgba(248, 250, 252, 0.4); padding: var(--space-10) 0;">
+        <section class="section section--light-bg">
             <div class="container-narrow">
                 <h2 class="mb-large">Education & Certifications</h2>
 
-                <div style="margin-bottom: var(--space-6);">
-                    <h4 style="color: var(--color-primary); margin-bottom: var(--space-1);">Master of Science, Computer Science</h4>
-                    <p style="color: var(--color-secondary); margin-bottom: 4px;">Keele University</p>
-                    <p style="color: var(--color-accent); font-size: 0.875rem; font-weight: 600;">2024</p>
+                <div class="education-item">
+                    <h4>Master of Science, Computer Science</h4>
+                    <p class="institution">Keele University</p>
+                    <p class="year">2024</p>
                 </div>
 
-                <div style="margin-bottom: var(--space-6);">
-                    <h4 style="color: var(--color-primary); margin-bottom: var(--space-1);">Bachelor of Science, Information Technology</h4>
-                    <p style="color: var(--color-secondary); margin-bottom: 4px;">Sikkim Manipal University</p>
-                    <p style="color: var(--color-accent); font-size: 0.875rem; font-weight: 600;">2017</p>
+                <div class="education-item">
+                    <h4>Bachelor of Science, Information Technology</h4>
+                    <p class="institution">Sikkim Manipal University</p>
+                    <p class="year">2017</p>
                 </div>
 
-                <h3 style="margin-top: var(--space-8); margin-bottom: var(--space-4);">Certifications</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: var(--space-2); padding-left: var(--space-3); position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--color-accent);">•</span>
+                <h3 class="certifications-title">Certifications</h3>
+                <ul class="certifications-list">
+                    <li>
                         <strong>Accessible and Inclusive Design Patterns</strong> — LinkedIn Learning
                     </li>
-                    <li style="margin-bottom: var(--space-2); padding-left: var(--space-3); position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--color-accent);">•</span>
+                    <li>
                         <strong>Advanced UX Design & Interaction Patterns</strong> — LinkedIn Learning
                     </li>
-                    <li style="margin-bottom: var(--space-2); padding-left: var(--space-3); position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--color-accent);">•</span>
+                    <li>
                         <strong>Design Systems Architecture</strong> — LinkedIn Learning
                     </li>
                 </ul>
 
-                <div style="margin-top: var(--space-8); text-align: center;">
-                    <a href="#" class="btn btn-primary" style="margin-right: var(--space-2);">Download Resume</a>
+                <div class="about-cta">
+                    <a href="#" class="btn btn-primary">Download Resume</a>
                     <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
                 </div>
             </div>

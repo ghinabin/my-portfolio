@@ -204,7 +204,7 @@ main > .section-compact:first-child {
 
 /* Subtle border between sections */
 .section + .section {
-  border-top: 1px solid rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 /* NAVIGATION */
@@ -607,9 +607,9 @@ main > .section-compact:first-child {
 
 .testimonial-card {
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  border-radius: var(--border-radius-lg);
-  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 32px;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
@@ -889,10 +889,10 @@ main > .section-compact:first-child {
 
 .competency-card {
   background: #ffffff;
-  padding: var(--space-5);
-  border-radius: var(--border-radius-lg);
+  padding: 32px;
+  border-radius: 16px;
   border-left: 4px solid var(--color-accent);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
   position: relative;
 }
@@ -1102,6 +1102,78 @@ main > .section-compact:first-child {
 .footer-links a:hover {
   background: rgba(0, 119, 182, 0.05);
   transform: translateY(-2px);
+}
+
+/* ABOUT PAGE SPECIFIC */
+.about-intro {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.education-item {
+  margin-bottom: var(--space-6);
+}
+
+.education-item h4 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.education-item .institution {
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+}
+
+.education-item .year {
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.certifications-title {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+}
+
+.certifications-list {
+  list-style: none;
+  padding: 0;
+}
+
+.certifications-list li {
+  margin-bottom: var(--space-2);
+  padding-left: var(--space-3);
+  position: relative;
+}
+
+.certifications-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.about-cta {
+  margin-top: var(--space-8);
+  text-align: center;
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* WORK PAGE SPECIFIC */
+.work-page-title {
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  margin-bottom: var(--space-1);
+}
+
+.work-page-subtitle {
+  max-width: 640px;
+  margin: 0 auto var(--space-5);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--color-secondary);
 }
 
 /* UTILITIES */
@@ -1397,7 +1469,7 @@ main > .section-compact:first-child {
 
   /* Contact Form - Optimized for mobile input */
   .contact-form {
-    padding: var(--space-5);
+    padding: 24px;
   }
 
   .form-input,
@@ -1677,20 +1749,20 @@ main > .section-compact:first-child {
 
 .contact-form {
   background: #ffffff;
-  padding: var(--space-8);
-  border-radius: var(--border-radius-lg);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .contact-info-card {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: var(--space-8);
-  border-radius: var(--border-radius-lg);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
   height: fit-content;
 }
 
@@ -1843,7 +1915,7 @@ main > .section-compact:first-child {
 }
 
 /* Contact Page Responsive */
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: var(--space-6);
@@ -1867,7 +1939,7 @@ main > .section-compact:first-child {
 
   .contact-form,
   .contact-info-card {
-    padding: var(--space-6);
+    padding: 24px;
   }
 
   .availability-content {
@@ -1883,7 +1955,7 @@ main > .section-compact:first-child {
 @media (max-width: 480px) {
   .contact-form,
   .contact-info-card {
-    padding: var(--space-5);
+    padding: 16px;
   }
 
   .contact-info-grid {
@@ -1924,6 +1996,10 @@ main > .section-compact:first-child {
 /* SECTION BACKGROUNDS */
 .section--light {
   background: #F8FAFC;
+}
+
+.section--light-bg {
+  background: rgba(248, 250, 252, 0.4);
 }
 
 .section--white {
