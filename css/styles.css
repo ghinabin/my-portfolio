@@ -406,7 +406,11 @@ main > .section-compact:first-child {
   text-align: center;
   background: linear-gradient(135deg, #f0f7fa 0%, #e8f4f8 50%, #f5f9fb 100%);
   overflow: hidden;
-  padding: calc(120px + var(--nav-height)) 0 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--nav-height) 0 40px;
 }
 
 .hero::before {
@@ -1293,7 +1297,8 @@ main > .section-compact:first-child {
 
   /* Hero Section - Tablet */
   .hero {
-    padding: 100px 0 64px;
+    min-height: 100vh;
+    padding: var(--nav-height) 0 40px;
   }
 
   .hero-name {
@@ -1342,7 +1347,8 @@ main > .section-compact:first-child {
   /* Typography stays same as 1024px on tablet */
   /* Hero Section - Mobile */
   .hero {
-    padding: 80px 0 48px;
+    min-height: 100vh;
+    padding: var(--nav-height) 0 32px;
   }
 
   .hero-name {
