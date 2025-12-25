@@ -189,7 +189,7 @@ main > .section-compact:first-child {
 }
 
 .section-large {
-  padding: 120px 0;
+  padding: 128px 0;
 }
 
 /* Compact section - less vertical spacing */
@@ -306,7 +306,7 @@ main > .section-compact:first-child {
 /* BUTTONS */
 .btn {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 16px 32px;
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 15px;
@@ -369,8 +369,8 @@ main > .section-compact:first-child {
 
 /* HERO SECTION */
 .hero {
-  padding: 120px 0 80px;
-  padding-top: calc(120px + 80px);
+  padding: 80px 0;
+  padding-top: calc(80px + 80px);
   text-align: center;
   background: linear-gradient(135deg, #f8fafc 0%, #e8eef3 100%);
   position: relative;
@@ -1025,7 +1025,7 @@ main > .section-compact:first-child {
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 14px 16px;
+  padding: 16px;
   border: 2px solid var(--color-border);
   border-radius: 8px;
   font-family: var(--font-body);
@@ -1218,8 +1218,8 @@ main > .section-compact:first-child {
 
   /* Hero Section - Tablet */
   .hero {
-    padding: 100px 0 64px;
-    padding-top: calc(100px + 80px);
+    padding: 80px 0 64px;
+    padding-top: calc(80px + 80px);
   }
 
   .hero h1,
@@ -1254,7 +1254,7 @@ main > .section-compact:first-child {
   }
 
   .section-compact {
-    padding: 40px 0;
+    padding: 48px 0;
   }
 
   main > .section:first-child,
@@ -1286,7 +1286,7 @@ main > .section-compact:first-child {
   /* Hero Section - Mobile */
   .hero {
     padding: 80px 0 48px;
-    padding-top: calc(80px + 60px);
+    padding-top: calc(80px + 64px);
   }
 
   .hero h1,
@@ -1326,7 +1326,7 @@ main > .section-compact:first-child {
 
   main > .section:first-child,
   main > .section-compact:first-child {
-    padding-top: calc(48px + 60px);
+    padding-top: calc(48px + 64px);
   }
 
   /* Navigation - Thumb-friendly spacing and tap targets */
@@ -1476,7 +1476,7 @@ main > .section-compact:first-child {
   .form-textarea {
     /* Prevent iOS zoom on focus - 16px minimum */
     font-size: 16px;
-    padding: 16px 18px;
+    padding: 16px;
   }
 
   /* Footer - Stack links, increase tap targets */
@@ -1646,7 +1646,7 @@ main > .section-compact:first-child {
   .btn {
     width: 100%;
     min-height: 48px;
-    padding: 14px 24px;
+    padding: 16px 24px;
     font-size: 1rem;
   }
 
