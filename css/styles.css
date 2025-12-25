@@ -88,6 +88,7 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   overflow-x: hidden;
+  padding-top: 88px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -208,7 +209,7 @@ span {
 /* First section on a page - accounts for transparent navbar */
 main > .section:first-child,
 main > .section-compact:first-child {
-  padding-top: calc(80px + 80px);
+  padding-top: 80px;
 }
 
 .section-large {
@@ -232,8 +233,11 @@ main > .section-compact:first-child {
 
 /* NAVIGATION */
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   background: transparent;
   border-bottom: 1px solid transparent;
   box-shadow: none;
@@ -393,7 +397,6 @@ main > .section-compact:first-child {
 /* HERO SECTION */
 .hero {
   padding: 80px 0;
-  padding-top: calc(80px + 80px);
   text-align: center;
   background: linear-gradient(135deg, #f8fafc 0%, #e8eef3 100%);
   position: relative;
@@ -728,7 +731,7 @@ main > .section-compact:first-child {
 /* CASE STUDY */
 .case-study-hero {
   background: transparent;
-  padding: calc(var(--space-12) + 80px) 0 var(--space-12);
+  padding: var(--space-12) 0;
   border-bottom: 1px solid var(--color-border);
   position: relative;
 }
@@ -1256,7 +1259,6 @@ main > .section-compact:first-child {
   /* Hero Section - Tablet */
   .hero {
     padding: 80px 0 64px;
-    padding-top: calc(80px + 80px);
   }
 
   .hero h1,
@@ -1296,7 +1298,7 @@ main > .section-compact:first-child {
 
   main > .section:first-child,
   main > .section-compact:first-child {
-    padding-top: calc(64px + 80px);
+    padding-top: 64px;
   }
 
   /* Grid Layouts */
@@ -1323,7 +1325,6 @@ main > .section-compact:first-child {
   /* Hero Section - Mobile */
   .hero {
     padding: 80px 0 48px;
-    padding-top: calc(80px + 64px);
   }
 
   .hero h1,
@@ -1363,7 +1364,7 @@ main > .section-compact:first-child {
 
   main > .section:first-child,
   main > .section-compact:first-child {
-    padding-top: calc(48px + 64px);
+    padding-top: 48px;
   }
 
   /* Navigation - Thumb-friendly spacing and tap targets */
@@ -1638,7 +1639,7 @@ main > .section-compact:first-child {
   /* First sections - reduce navbar offset on mobile */
   main > .section:first-child,
   main > .section-compact:first-child {
-    padding-top: calc(40px + 60px);
+    padding-top: 40px;
   }
 
   /* Navigation - Compact on small screens */
@@ -1670,16 +1671,15 @@ main > .section-compact:first-child {
 
   /* Hero - Stack CTAs vertically */
   .hero {
-    padding: calc(var(--space-8) + 60px) 0 var(--space-6);
-    padding-top: calc(var(--space-8) + 60px) !important;
+    padding: var(--space-8) 0 var(--space-6);
   }
 
   .case-study-hero {
-    padding: calc(var(--space-10) + 60px) 0 var(--space-8);
+    padding: var(--space-10) 0 var(--space-8);
   }
 
   .contact-hero {
-    padding-top: calc(var(--space-6) + 60px);
+    padding-top: var(--space-6);
   }
 
   .hero-cta {
@@ -1822,7 +1822,7 @@ main > .section-compact:first-child {
 
 /* CONTACT PAGE */
 .contact-hero {
-  padding: calc(clamp(3rem, 5vw, 4rem) + 80px) 0 var(--space-5);
+  padding: clamp(3rem, 5vw, 4rem) 0 var(--space-5);
   text-align: center;
   background: transparent;
 }
