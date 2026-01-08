@@ -1,0 +1,21 @@
+{
+  "name": "nabin-ghimire-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Nabin Ghimire - Senior Product Designer",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "dev": "npx http-server -p 8000 -o",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "portfolio",
+    "design",
+    "product-designer",
+    "healthcare",
+    "ux"
+  ],
+  "author": "Nabin Ghimire <ghinabin@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true
+}
